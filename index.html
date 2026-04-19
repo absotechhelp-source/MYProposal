@@ -589,6 +589,20 @@ input:checked+.tog-trk:before{transform:translateX(17px)}
           <span style="color:var(--BD);font-size:20px">›</span>
         </div>
 
+        <!-- Proposal History -->
+        <div onclick="switchTab('prop-history')" style="display:flex;align-items:center;justify-content:space-between;padding:14px;background:var(--W);border-radius:var(--RB);border:1px solid var(--BD);cursor:pointer;margin-top:8px">
+          <div style="display:flex;align-items:center;gap:12px">
+            <div style="width:40px;height:40px;border-radius:10px;background:#fff1f2;display:flex;align-items:center;justify-content:center;flex-shrink:0;overflow:hidden;padding:3px">
+              <img src="''' + manga_src + '''" style="width:34px;height:34px;object-fit:contain" alt="MY">
+            </div>
+            <div>
+              <div style="font-size:14px;font-weight:600;color:var(--T)">Proposal history <span style="font-size:10px;background:#ef4444;color:#fff;padding:1px 6px;border-radius:10px;font-weight:700;margin-left:4px;vertical-align:middle">MY</span></div>
+              <div style="font-size:11px;color:var(--T2);margin-top:2px">View and track submitted proposals</div>
+            </div>
+          </div>
+          <span style="color:var(--BD);font-size:20px">›</span>
+        </div>
+
       </div>
     </div><!-- /tab-quotes-hub -->
 
@@ -1646,7 +1660,7 @@ input:checked+.tog-trk:before{transform:translateX(17px)}
       <!-- SECTION C: Policy Details -->
       <div class="card">
         <div class="sec-lbl">Section C — Policy Details</div>
-        <div style="background:var(--ML);border-radius:var(--RB);padding:10px 14px;margin-bottom:12px">
+        <div style="background:var(--ML);border-radius:var(--RB);padding:10px 14px;margin-bottom:12px" id="prop-prefilled-policy">
           <div style="font-size:11px;color:var(--M);font-weight:600;margin-bottom:6px">Pre-filled from quotation</div>
           <div style="display:flex;justify-content:space-between;margin-bottom:4px">
             <span style="font-size:12px;color:var(--T2)">Monthly Premium</span>
@@ -1657,7 +1671,17 @@ input:checked+.tog-trk:before{transform:translateX(17px)}
             <span style="font-size:14px;font-weight:800;color:var(--M)" id="prop-tmv-display">—</span>
           </div>
         </div>
-        <input type="hidden" id="prop-premium">
+        <div id="prop-manual-policy" style="display:none">
+          <div class="row2">
+            <div><label class="f-lbl">Monthly Premium (USD) *</label>
+              <input class="f-inp" type="number" id="prop-premium-manual" min="45" step="0.01" placeholder="min USD 45" oninput="propManualPremUpdate()">
+            </div>
+            <div><label class="f-lbl">Target Maturity Value (USD)</label>
+              <input class="f-inp" type="number" id="prop-tmv-manual" min="11551" placeholder="auto-calculated" readonly style="background:#f9f9f9">
+            </div>
+          </div>
+        </div>
+        <input type="hidden" id="prop-premium" oninput="propCheck500()">
         <input type="hidden" id="prop-tmv">
         <div class="full"><label class="f-lbl">Commencement Date *</label>
           <input class="f-inp" type="date" id="prop-commencement">
@@ -4163,8 +4187,11 @@ function myPropInit(){
     propCheck500();
   } else {
     if(notice) notice.style.display='none';
-    document.getElementById('prop-premium-display').textContent = 'Not pre-filled — enter manually';
-    document.getElementById('prop-tmv-display').textContent = '—';
+    // No quote — show manual entry fields
+    const pf = document.getElementById('prop-prefilled-policy');
+    const mp = document.getElementById('prop-manual-policy');
+    if(pf) pf.style.display='none';
+    if(mp) mp.style.display='block';
   }
   // Init beneficiary section if empty
   if(myPropBenefCount === 0) propAddBenef();
@@ -4205,8 +4232,22 @@ function propToggleMarital(){
 
 /* ── Check USD 500 threshold ── */
 function propCheck500(){
-  const prem = parseFloat(document.getElementById('prop-premium').value)||0;
+  const prem = parseFloat(document.getElementById('prop-premium').value)||
+               parseFloat(document.getElementById('prop-premium-manual')?document.getElementById('prop-premium-manual').value:0)||0;
   document.getElementById('prop-500-warn').style.display = prem>500?'block':'none';
+}
+
+/* ── Manual premium entry (when no pre-filled quote) ── */
+function propManualPremUpdate(){
+  const prem = parseFloat(document.getElementById('prop-premium-manual').value)||0;
+  // Auto-calculate TMV
+  const tmv = prem>0 ? Math.round(prem*13000/50.648) : 0;
+  const tmvEl = document.getElementById('prop-tmv-manual');
+  if(tmvEl) tmvEl.value = tmv>0?tmv:'';
+  // Update hidden fields
+  document.getElementById('prop-premium').value = prem||'';
+  document.getElementById('prop-tmv').value = tmv||'';
+  propCheck500();
 }
 
 /* ── Beneficiary management ── */
@@ -4601,6 +4642,15 @@ function myPropReset(){
   });
   document.getElementById('prop-premium-display').textContent='—';
   document.getElementById('prop-tmv-display').textContent='—';
+  // Reset manual vs pre-filled visibility
+  const prefilled = document.getElementById('prop-prefilled-policy');
+  const manual = document.getElementById('prop-manual-policy');
+  if(prefilled) prefilled.style.display='block';
+  if(manual) manual.style.display='none';
+  const manPrem = document.getElementById('prop-premium-manual');
+  const manTMV = document.getElementById('prop-tmv-manual');
+  if(manPrem) manPrem.value='';
+  if(manTMV) manTMV.value='';
   document.getElementById('prop-success').style.display='none';
   document.getElementById('prop-submit-btn').style.display='flex';
   propUpdateShareTotal();
