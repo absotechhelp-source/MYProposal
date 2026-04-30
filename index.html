@@ -577,6 +577,23 @@ input:checked+.tog-trk:before{transform:translateX(17px)}
           <span style="color:#be123c;font-size:20px">›</span>
         </div>
 
+        <!-- Phindu Savings Plan -->
+        <div class="card" onclick="switchTab('phindu')" style="cursor:pointer;display:flex;align-items:center;justify-content:space-between;padding:14px 16px;margin-bottom:10px;border:1.5px solid #f59e0b;background:linear-gradient(135deg,#fffbeb 0%,#fff 100%)">
+          <div style="display:flex;align-items:center;gap:12px">
+            <div style="width:40px;height:40px;border-radius:10px;background:#fef3c7;display:flex;align-items:center;justify-content:center;flex-shrink:0">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#92400e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/>
+                <line x1="6" y1="20" x2="6" y2="14"/><line x1="2" y1="20" x2="22" y2="20"/>
+              </svg>
+            </div>
+            <div>
+              <div style="font-size:14px;font-weight:600;color:#78350f">Phindu Savings Plan</div>
+              <div style="font-size:11px;color:var(--T2);margin-top:2px">10-Year Endowment · Growth + Protection</div>
+            </div>
+          </div>
+          <span style="color:#f59e0b;font-size:20px">›</span>
+        </div>
+
         <!-- History -->
         <div class="dash-quick-title" style="margin-bottom:8px">History</div>
         <div class="card" onclick="switchTab('history')" style="cursor:pointer;display:flex;align-items:center;justify-content:space-between;padding:14px 16px">
@@ -1031,7 +1048,29 @@ input:checked+.tog-trk:before{transform:translateX(17px)}
             </div>
           </div>
         </div>
+
+        <!-- Phindu Savings Plan — LIVE -->
+        <div class="product-card" style="border:1.5px solid #f59e0b;background:linear-gradient(135deg,#fffbeb 0%,#fff 100%)">
+          <div class="product-header">
+            <div class="product-icon" style="background:#fef3c7">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#92400e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/><line x1="2" y1="20" x2="22" y2="20"/></svg>
+            </div>
+            <div>
+              <div class="product-name" style="color:#78350f">Phindu Savings Plan</div>
+              <div class="product-type">10-Year Endowment · With Profits</div>
+            </div>
+          </div>
+          <div class="product-body">A 10-year endowment savings plan with annual bonus growth and a Money Tree benefit paid every 5 years. Maturity benefit at Year 10. Entry age 18–65. No medical tests required.</div>
+          <div class="product-footer" style="justify-content:space-between;align-items:center">
+            <span class="product-live-badge">● LIVE — Quoting enabled</span>
+            <div style="display:flex;gap:8px">
+              <button class="btn-sm btn-pdf" onclick="switchTab('phindu')">Quote now</button>
+              <button class="btn-sm btn-wa" onclick="shareProductWA('Phindu Savings Plan')"><svg viewBox="0 0 24 24" width="13" height="13" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12 12 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.625.712.227 1.36.195 1.87.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.555 4.129 1.526 5.869L.057 23.882l6.198-1.625A11.95 11.95 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.793 9.793 0 0 1-5.013-1.376l-.36-.213-3.716.975.993-3.63-.234-.374A9.793 9.793 0 0 1 2.182 12c0-5.417 4.401-9.818 9.818-9.818 5.417 0 9.818 4.401 9.818 9.818 0 5.417-4.401 9.818-9.818 9.818z"/></svg> Share</button>
+            </div>
+          </div>
+        </div>
         <!-- Placeholder products -->
+
         <!-- Manga Yako — LIVE -->
         <div class="product-card" style="border:1.5px solid #fca5a5;background:linear-gradient(135deg,#fff5f5 0%,#fff 100%)">
           <div class="product-header">
@@ -1296,6 +1335,23 @@ input:checked+.tog-trk:before{transform:translateX(17px)}
             </div>
           </div>
           <span style="color:#be123c;font-size:20px">›</span>
+        </div>
+
+        <!-- Phindu Savings Plan -->
+        <div class="card" onclick="switchTab('phindu')" style="cursor:pointer;display:flex;align-items:center;justify-content:space-between;padding:14px 16px;margin-bottom:10px;border:1.5px solid #f59e0b;background:linear-gradient(135deg,#fffbeb 0%,#fff 100%)">
+          <div style="display:flex;align-items:center;gap:12px">
+            <div style="width:40px;height:40px;border-radius:10px;background:#fef3c7;display:flex;align-items:center;justify-content:center;flex-shrink:0">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#92400e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/>
+                <line x1="6" y1="20" x2="6" y2="14"/><line x1="2" y1="20" x2="22" y2="20"/>
+              </svg>
+            </div>
+            <div>
+              <div style="font-size:14px;font-weight:600;color:#78350f">Phindu Savings Plan</div>
+              <div style="font-size:11px;color:var(--T2);margin-top:2px">10-Year Endowment · Growth + Protection</div>
+            </div>
+          </div>
+          <span style="color:#f59e0b;font-size:20px">›</span>
         </div>
 
         <!-- History -->
@@ -2135,6 +2191,240 @@ input:checked+.tog-trk:before{transform:translateX(17px)}
       </div>
     </div><!-- /tab-manga-yako -->
 
+    <!-- ── TAB: PHINDU SAVINGS PLAN ── -->
+    <div class="tab-panel" id="tab-phindu">
+      <div style="background:var(--M);padding:14px 18px 12px;display:flex;align-items:center;gap:10px">
+        <button onclick="switchTab('quotes-hub')" style="background:none;border:none;color:var(--CR);font-size:20px;cursor:pointer;padding:0;line-height:1">‹</button>
+        <div>
+          <div style="font-family:'Playfair Display',serif;font-size:16px;color:var(--CR);font-weight:700">Phindu Savings Plan</div>
+          <div style="font-size:11px;color:rgba(216,201,180,.8);margin-top:2px">10-Year Endowment · Growth + Protection</div>
+        </div>
+      </div>
+      <div style="padding:14px">
+
+        <!-- Mode toggle -->
+        <div style="display:flex;background:#f3f4f6;border-radius:8px;padding:3px;margin-bottom:14px">
+          <button id="phindu-tab-prem" class="mode-tab active" onclick="phinduSetMode('prem')">Premium → SA</button>
+          <button id="phindu-tab-sa" class="mode-tab" onclick="phinduSetMode('sa')">SA → Premium</button>
+        </div>
+
+        <!-- Client details -->
+        <div class="card" style="margin-bottom:12px">
+          <div class="f-row">
+            <div class="f-col"><label class="f-lbl">First Name *</label><input id="phindu-fname" class="f-inp" type="text" placeholder="First name"></div>
+            <div class="f-col"><label class="f-lbl">Middle Name</label><input id="phindu-mname" class="f-inp" type="text" placeholder="Optional"></div>
+          </div>
+          <label class="f-lbl">Last Name *</label>
+          <input id="phindu-lname" class="f-inp" type="text" placeholder="Last name" style="margin-bottom:10px">
+          <div class="f-row">
+            <div class="f-col">
+              <label class="f-lbl">Date of Birth *</label>
+              <input id="phindu-dob" class="f-inp" type="date" onchange="phinduCheckAge()">
+            </div>
+            <div class="f-col">
+              <label class="f-lbl">Gender</label>
+              <select id="phindu-gender" class="f-inp"><option value="">Select</option><option value="Male">Male</option><option value="Female">Female</option></select>
+            </div>
+          </div>
+          <div id="phindu-age-err" style="display:none;color:#dc2626;font-size:12px;margin-top:4px">Age must be between 18 and 65</div>
+          <div id="phindu-anb-pill" style="display:none;background:#fef3c7;color:#92400e;border-radius:20px;padding:4px 12px;font-size:12px;margin-top:6px;text-align:center;font-weight:600"></div>
+        </div>
+
+        <!-- Money Tree Option -->
+        <div class="card" style="margin-bottom:12px">
+          <label class="f-lbl">Money Tree Option</label>
+          <select id="phindu-mt" class="f-inp">
+            <option value="10">10% of Basic Sum Assured</option>
+            <option value="15">15% of Basic Sum Assured</option>
+            <option value="20">20% of Basic Sum Assured</option>
+            <option value="25">25% of Basic Sum Assured</option>
+          </select>
+          <div style="font-size:11px;color:#6b7280;margin-top:6px">💰 Paid at Year 5 survival and again at Maturity (Year 10)</div>
+        </div>
+
+        <!-- Premium input area -->
+        <div id="phindu-prem-area" class="card" style="margin-bottom:12px">
+          <label class="f-lbl">Monthly Premium (MWK) *</label>
+          <input id="phindu-prem" class="f-inp" type="number" placeholder="e.g. 50000" min="25000" max="500000" step="1000">
+          <div style="font-size:11px;color:#6b7280;margin-top:4px">Range: MWK 25,000 – 500,000 per month</div>
+        </div>
+
+        <!-- SA → Premium input area -->
+        <div id="phindu-sa-area" class="card" style="display:none;margin-bottom:12px">
+          <label class="f-lbl">Target Basic Sum Assured (MWK) *</label>
+          <input id="phindu-target-sa" class="f-inp" type="number" placeholder="e.g. 5000000">
+          <div style="font-size:11px;color:#6b7280;margin-top:4px">We calculate the required monthly premium for you</div>
+        </div>
+
+        <!-- Date of quote -->
+        <div class="card" style="margin-bottom:14px">
+          <label class="f-lbl">Date of Quote</label>
+          <input id="phindu-doq" class="f-inp" type="date">
+        </div>
+
+        <!-- Generate button -->
+        <button class="btn-primary" id="phindu-gen-btn" onclick="phinduQuoteMode==='prem'?phinduGenerateQuote():phinduGenerateQuote2()" style="margin-bottom:80px;background:var(--M)">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/><line x1="2" y1="20" x2="22" y2="20"/></svg>
+          Generate Phindu Quote
+        </button>
+
+        <!-- Quote output -->
+        <div id="phindu-quote-output" style="display:none">
+          <div class="action-row">
+            <button class="btn-sm btn-wa" onclick="phinduShareWA()"><svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.553 4.116 1.522 5.851L.057 23.857a.5.5 0 0 0 .603.641l6.258-1.641A11.945 11.945 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.793 9.793 0 0 1-5.015-1.376l-.36-.214-3.713.974.993-3.614-.234-.372A9.794 9.794 0 0 1 2.182 12c0-5.417 4.401-9.818 9.818-9.818 5.417 0 9.818 4.401 9.818 9.818 0 5.417-4.401 9.818-9.818 9.818z"/></svg> WhatsApp</button>
+            <button class="btn-sm btn-pdf" onclick="phinduPrintQuote()"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg> PDF</button>
+            <button class="btn-sm btn-sms" onclick="phinduShareSMS()"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg> Text</button>
+            <button class="btn-sm btn-email-btn" onclick="phinduShareEmail()"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg> Email</button>
+            <button class="btn-sm" style="background:var(--M);color:var(--CR)" onclick="switchTab('phindu-proposal')"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg> Proposal</button>
+            <button class="btn-sm btn-outline" onclick="phinduResetQuote()"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 .49-4.95"/></svg> New</button>
+          </div>
+          <div id="phindu-sync-status" style="display:none;font-size:11px;text-align:center;padding:4px;margin-bottom:6px;border-radius:6px;background:var(--ML)"></div>
+          <div class="qdoc" id="phindu-q-doc" style="margin-bottom:80px"></div>
+        </div>
+
+      </div>
+    </div><!-- /tab-phindu -->
+
+    <!-- ── TAB: PHINDU HISTORY ── -->
+    <div class="tab-panel" id="tab-phindu-history">
+      <div style="background:var(--M);padding:14px 18px 12px;display:flex;align-items:center;gap:10px">
+        <button onclick="switchTab('quotes-hub')" style="background:none;border:none;color:var(--CR);font-size:20px;cursor:pointer;padding:0;line-height:1">‹</button>
+        <div>
+          <div style="font-family:'Playfair Display',serif;font-size:16px;color:var(--CR);font-weight:700">Phindu Quote History</div>
+          <div id="phindu-hist-count" style="font-size:11px;color:rgba(216,201,180,.8);margin-top:2px"></div>
+        </div>
+      </div>
+      <div style="padding:14px">
+        <div id="phindu-hist-list"></div>
+      </div>
+    </div><!-- /tab-phindu-history -->
+
+    <!-- ── TAB: PHINDU PROPOSAL ── -->
+    <div class="tab-panel" id="tab-phindu-proposal">
+      <div style="background:var(--M);padding:14px 18px 12px;display:flex;align-items:center;gap:10px">
+        <button onclick="switchTab('phindu')" style="background:none;border:none;color:var(--CR);font-size:20px;cursor:pointer;padding:0;line-height:1">‹</button>
+        <div>
+          <div style="font-family:'Playfair Display',serif;font-size:16px;color:var(--CR);font-weight:700">Phindu Proposal Form</div>
+          <div style="font-size:11px;color:rgba(216,201,180,.8);margin-top:2px">Phindu Savings Plan · 10 Year Endowment</div>
+        </div>
+      </div>
+      <div style="padding:14px">
+
+        <div id="phindu-prop-prefill-notice" style="display:none;background:#fef3c7;border:1px solid #f59e0b;border-radius:8px;padding:10px 12px;margin-bottom:12px;font-size:12px;color:#78350f">
+          ✓ Pre-filled from your Phindu quote. Please review all fields.
+        </div>
+
+        <!-- Section A: Policyholder -->
+        <div class="card" style="margin-bottom:12px">
+          <div class="f-sec-title" style="color:#78350f">A · Policyholder Details</div>
+          <div class="f-row">
+            <div class="f-col"><label class="f-lbl">First Name *</label><input id="pp-fname" class="f-inp" type="text" placeholder="First name"></div>
+            <div class="f-col"><label class="f-lbl">Middle Name</label><input id="pp-mname" class="f-inp" type="text" placeholder="Optional"></div>
+          </div>
+          <label class="f-lbl">Last Name *</label>
+          <input id="pp-lname" class="f-inp" type="text" placeholder="Last name" style="margin-bottom:10px">
+          <div class="f-row">
+            <div class="f-col"><label class="f-lbl">Date of Birth *</label><input id="pp-dob" class="f-inp" type="date"></div>
+            <div class="f-col"><label class="f-lbl">Gender *</label>
+              <select id="pp-gender" class="f-inp"><option value="">Select</option><option value="Male">Male</option><option value="Female">Female</option></select>
+            </div>
+          </div>
+          <label class="f-lbl">Nationality</label>
+          <input id="pp-nationality" class="f-inp" type="text" placeholder="e.g. Malawian" style="margin-bottom:10px">
+          <label class="f-lbl">Phone Number *</label>
+          <input id="pp-phone" class="f-inp" type="tel" placeholder="+265 XXX XXX XXX" style="margin-bottom:10px">
+          <label class="f-lbl">Email Address</label>
+          <input id="pp-email" class="f-inp" type="email" placeholder="email@example.com" style="margin-bottom:10px">
+          <label class="f-lbl">Physical Address *</label>
+          <textarea id="pp-address" class="f-inp" rows="2" placeholder="Street, Area, City"></textarea>
+          <div class="f-row" style="margin-top:10px">
+            <div class="f-col"><label class="f-lbl">ID Type</label>
+              <select id="pp-id-type" class="f-inp"><option value="">Select</option><option value="NID">National ID</option><option value="Passport">Passport</option><option value="Drivers License">Driver's Licence</option></select>
+            </div>
+            <div class="f-col"><label class="f-lbl">ID Number</label><input id="pp-id-num" class="f-inp" type="text" placeholder="ID number"></div>
+          </div>
+        </div>
+
+        <!-- Section B: Policy Details -->
+        <div class="card" style="margin-bottom:12px">
+          <div class="f-sec-title" style="color:#78350f">B · Policy Details</div>
+          <div class="f-row">
+            <div class="f-col">
+              <label class="f-lbl">Monthly Premium (MWK) *</label>
+              <input id="pp-premium" class="f-inp" type="number" placeholder="25000" min="25000">
+            </div>
+            <div class="f-col">
+              <label class="f-lbl">Money Tree Option *</label>
+              <select id="pp-mt" class="f-inp">
+                <option value="10">10%</option><option value="15">15%</option>
+                <option value="20">20%</option><option value="25">25%</option>
+              </select>
+            </div>
+          </div>
+          <label class="f-lbl" style="margin-top:10px">Commencement Date</label>
+          <input id="pp-commence" class="f-inp" type="date" style="margin-bottom:10px">
+          <label class="f-lbl">Branch</label>
+          <select id="pp-branch" class="f-inp">
+            <option value="">Select Branch</option>
+            <option value="Blantyre">Blantyre</option><option value="Lilongwe">Lilongwe</option>
+            <option value="Mzuzu">Mzuzu</option><option value="Mangochi">Mangochi</option><option value="Kasungu">Kasungu</option>
+          </select>
+          <label class="f-lbl" style="margin-top:10px">Payment Method</label>
+          <select id="pp-payment" class="f-inp">
+            <option value="">Select</option>
+            <option value="Standing Order">Standing Order</option>
+            <option value="Cash">Cash</option>
+            <option value="Mobile Money">Mobile Money</option>
+            <option value="Bank Transfer">Bank Transfer</option>
+          </select>
+        </div>
+
+        <!-- Section C: Beneficiary -->
+        <div class="card" style="margin-bottom:12px">
+          <div class="f-sec-title" style="color:#78350f">C · Beneficiary Details</div>
+          <div id="pp-benef-container"></div>
+          <button id="pp-add-benef-btn" onclick="phinduAddBenef()" class="btn-sm btn-outline" style="width:100%;margin-top:6px;justify-content:center">+ Add Beneficiary</button>
+          <div id="pp-share-total" style="font-size:11px;color:#6b7280;margin-top:6px;text-align:center"></div>
+        </div>
+
+        <!-- Section D: Declarations -->
+        <div class="card" style="margin-bottom:14px">
+          <div class="f-sec-title" style="color:#78350f">D · Declarations</div>
+          <div style="display:flex;align-items:flex-start;gap:10px;margin-bottom:10px">
+            <input type="checkbox" id="pp-decl-client" style="margin-top:2px;accent-color:#f59e0b;width:18px;height:18px;flex-shrink:0">
+            <label for="pp-decl-client" style="font-size:12px;color:var(--T);line-height:1.4">I declare that all information provided is true and accurate. I agree to the policy terms and conditions of the Phindu Savings Plan.</label>
+          </div>
+          <div style="display:flex;align-items:flex-start;gap:10px">
+            <input type="checkbox" id="pp-decl-agent" style="margin-top:2px;accent-color:#f59e0b;width:18px;height:18px;flex-shrink:0">
+            <label for="pp-decl-agent" style="font-size:12px;color:var(--T);line-height:1.4">I, the agent, confirm I have explained the product benefits and the client has understood and consented to the proposal.</label>
+          </div>
+        </div>
+
+        <!-- Submit -->
+        <button class="btn-primary" id="pp-submit-btn" onclick="phinduPropSubmit()" style="margin-bottom:80px;background:var(--M)">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          Submit Proposal
+        </button>
+
+        <!-- Success -->
+        <div id="pp-success" style="display:none;text-align:center;padding:20px;background:var(--ML);border-radius:12px;border:1px solid #e8c8c8;margin-bottom:80px">
+          <div style="width:44px;height:44px;background:var(--M);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 12px">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="white" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <div id="pp-success-title" style="font-size:15px;font-weight:700;color:var(--M)">Proposal Submitted</div>
+          <div id="pp-success-sub" style="font-size:12px;color:var(--M2);margin-top:4px">Saved to database · Team Leader notified</div>
+          <div id="pp-ref-display" style="font-size:11px;font-weight:600;margin-top:10px;background:#f3f4f6;padding:4px 14px;border-radius:20px;display:inline-block"></div>
+          <div style="margin-top:14px;display:flex;gap:8px;justify-content:center">
+            <button class="btn-sm btn-outline" onclick="phinduPropReset()">New Proposal</button>
+            <button class="btn-sm btn-outline" onclick="switchTab('history')">View History</button>
+          </div>
+        </div>
+
+      </div>
+    </div><!-- /tab-phindu-proposal -->
+
+
+
   </div><!-- /app-body -->
 
   <!-- BOTTOM NAV — Home · Quotes · More -->
@@ -2612,6 +2902,16 @@ async function doLogin(){
 }
 function doLogout(){
   currentAgent='';isAdmin=false;anb=null;selectedOcc=null;quoteData=null;histModalQuote=null;
+  myQuoteData=null;myAnb=null;myPropData=null;
+  phinduQuoteData=null;phinduAnb=null;phinduPropData=null;
+  sessionQuoteCount=0;sessionProposals=0;
+  /* Hide MY + Phindu outputs so next agent sees a clean state */
+  ['my-quote-output','phindu-quote-output'].forEach(function(id){
+    var e=document.getElementById(id);if(e)e.style.display='none';
+  });
+  ['my-gen-btn','phindu-gen-btn'].forEach(function(id){
+    var e=document.getElementById(id);if(e)e.style.display='flex';
+  });
   document.getElementById('screen-app').classList.remove('active');
   document.getElementById('screen-login').classList.add('active');
   document.getElementById('l-user').value='';
@@ -2627,7 +2927,8 @@ function doLogout(){
 function switchTab(tab){
   // All known tab panels
   const allTabs=['home','quotes-hub','quote','history','admin','settings',
-                 'share','bcard','products','alterations','claims','proposals-hub','proposal','prop-history','profile','manga-yako'];
+                 'share','bcard','products','alterations','claims','proposals-hub','proposal','prop-history','profile','manga-yako',
+                 'phindu','phindu-proposal'];
   // Nav buttons (only 4 in bottom nav)
   const navTabs=['home','quotes-hub','more'];
   allTabs.forEach(t=>{
@@ -2654,6 +2955,8 @@ function switchTab(tab){
   }
   if(tab==='proposal')myPropInit();
   if(tab==='prop-history')renderPropHistory();
+  if(tab==='phindu')initPhinduTab();
+  if(tab==='phindu-proposal')phinduPropInit();
   const ab=document.getElementById('app-body');
   if(ab)ab.scrollTop=0;
   const gb=document.getElementById('gen-btn');
@@ -2664,13 +2967,15 @@ function switchTab(tab){
     const adminSuffix=isAdmin?' [Admin]':'';
     if(tab==='manga-yako')
       tbar.textContent='Manga Yako · '+currentAgent+adminSuffix;
+    else if(['phindu','phindu-proposal'].includes(tab))
+      tbar.textContent='Phindu · '+currentAgent+adminSuffix;
     else if(['quote','quotes-hub','history'].includes(tab))
       tbar.textContent='Pure Savings Plan · '+currentAgent+adminSuffix;
     else
       tbar.textContent='VLA Sales App · '+currentAgent+adminSuffix;
   }
   // Keep Quotes nav highlighted when inside quote sub-screens
-  if(['quote','history','quotes-hub','manga-yako'].includes(tab)){
+  if(['quote','history','quotes-hub','manga-yako','phindu','phindu-proposal'].includes(tab)){
     const qBtn=document.getElementById('nav-quotes-hub');
     if(qBtn)qBtn.classList.add('active');
   }
@@ -3167,14 +3472,19 @@ function renderHistory(){
   const filterAgent=document.getElementById('hist-filter-agent').value||'';
   const sort=document.getElementById('hist-filter-sort').value||'newest';
 
-  // Combine PSP + MY quotes with product tag
+  // Combine PSP + MY + Phindu quotes with product tag
   const pspQ = getLocalQuotes().map(q=>({...q,_product:'PSP'}));
   const myQ  = getLocalMyQuotes().map(q=>({...q,_product:'MY', ref:q.ref,
     clientName:q.clientName,agent:q.agent,savedAt:q.savedAt,doq:q.doq,
     totalP:q.prem, SA:q.tmv, projM:q.tmv, isMo:true,
     clientCity:q.clientCity,clientCountry:q.clientCountry
   }));
-  const allQuotes=[...pspQ,...myQ].sort((a,b)=>new Date(b.savedAt)-new Date(a.savedAt));
+  const phinduRaw = JSON.parse(localStorage.getItem(PHINDU_QUOTES_KEY)||'[]');
+  const phinduQ = phinduRaw.map(q=>({...q,_product:'PHINDU',
+    clientName:q.name, doq:q.savedAt?q.savedAt.split('T')[0]:'',
+    totalP:q.premium, SA:q.basicSA, projM:q.totalReceipts
+  }));
+  const allQuotes=[...pspQ,...myQ,...phinduQ].sort((a,b)=>new Date(b.savedAt)-new Date(a.savedAt));
   const agentNames=[...new Set(allQuotes.map(q=>q.agent))].filter(Boolean).sort();
   const sel=document.getElementById('hist-filter-agent');
   const prevVal=sel.value;
@@ -3202,15 +3512,15 @@ function renderHistory(){
     return `
     <div class="hist-item" onclick="openHistModal('${q.ref}')">
       <div style="flex:1;min-width:0">
-        <div class="hist-name">${q.clientName}${q._product==='MY'?'<span style=\'font-size:9px;background:#e8f4ea;color:#16a34a;padding:1px 6px;border-radius:8px;font-weight:700;margin-left:5px\'>MY</span>':''}</div>
-        <div class="hist-meta">${q._product==='MY'?'15 yrs · Monthly':q.term+' yrs · '+q.freq} · ANB ${q.anb||'—'}${q.dabIncluded?' · +DAB':''}</div>
+        <div class="hist-name">${q.clientName}${q._product==='MY'?'<span style=\'font-size:9px;background:#e8f4ea;color:#16a34a;padding:1px 6px;border-radius:8px;font-weight:700;margin-left:5px\'>MY</span>':q._product==='PHINDU'?'<span style=\'font-size:9px;background:#fef3c7;color:#92400e;padding:1px 6px;border-radius:8px;font-weight:700;margin-left:5px\'>PHINDU</span>':''}</div>
+        <div class="hist-meta">${q._product==='MY'?'15 yrs · Monthly':q._product==='PHINDU'?'10 yrs · '+q.mt+'% MT · ANB '+q.anb:q.term+' yrs · '+q.freq+' · ANB '+(q.anb||'—')+(q.dabIncluded?' · +DAB':'')}</div>
         <div class="hist-meta" style="font-size:10px;margin-top:2px;color:var(--BD)">${q.ref}</div>
-        <div style="margin-top:6px">${agentLabel}<span class="hist-tag">${q.occupation||''}</span></div>
+        <div style="margin-top:6px">${agentLabel}${q._product!=='PHINDU'?'<span class=\'hist-tag\'>'+( q.occupation||'')+'</span>':''}</div>
       </div>
       <div style="text-align:right;flex-shrink:0">
         <div class="hist-prem">${q._product==='MY'?usd(q.prem)+'/mo':mk(q.totalP)}</div>
         <div class="hist-date">${fmtDate(q.doq)}</div>
-        <div class="hist-date" style="color:var(--RS)">${mk(q.projM)} at mat.</div>
+        <div class="hist-date" style="color:var(--RS)">${q._product==='PHINDU'?'Profit: '+mk(q.profit):mk(q.projM)+' at mat.'}</div>
       </div>
     </div>`;
   }).join('');
@@ -3233,6 +3543,10 @@ function openHistModal(refOrIdx){
   // For MY quotes, show a simple summary instead of PSP modal template
   if(q._product==='MY'){
     openMyHistModal(q);
+    return;
+  }
+  if(q._product==='PHINDU'){
+    openPhinduHist(q.ref);
     return;
   }
   histModalQuote=q;
@@ -4963,7 +5277,7 @@ function myPropReset(){
   // Restore banner to default state after viewing history
   const rstTitle=document.getElementById('prop-success-title');
   const rstSub=document.getElementById('prop-success-sub');
-  if(rstTitle){rstTitle.textContent='Proposal Submitted';rstTitle.style.color='#16a34a';}
+  if(rstTitle){rstTitle.textContent='Proposal Submitted';rstTitle.style.color='var(--M)';}
   if(rstSub){rstSub.textContent='Saved to database · Team Leader notified';rstSub.style.color='#166534';}
   propUpdateShareTotal();
   myPropBenefCount=0;
@@ -5237,6 +5551,568 @@ if('serviceWorker' in navigator){
   };
 })();
 
+
+/* ═══════════════════════════════════════════
+   PHINDU SAVINGS PLAN ENGINE
+   10-Year Endowment · Money Tree Benefits
+   NOTE: 25% table = 20% values (pending correction)
+═══════════════════════════════════════════ */
+
+const PHINDU_QUOTES_KEY = 'vla_phindu_quotes';
+const PHINDU_PROPOSALS_KEY = 'vla_phindu_proposals';
+const PHINDU_MIN_PREM = 25000;
+const PHINDU_MAX_PREM = 500000;
+const PHINDU_TERM = 10;
+
+/* -- Lookup tables [basicSA, saWithBonus] per [mt][ageBand][premium] -- */
+const PHINDU_DATA = {
+  10: {
+    '18-27': {25000:[2301192,4526793],30000:[2776042,5460895],50000:[4664467,9175712],100000:[9374529,18441117]},
+    '28-37': {25000:[2258980,4443755],30000:[2717449,5345634],50000:[4566015,8982043],100000:[9202565,18102838]},
+    '38-47': {25000:[2251334,4428715],30000:[2710708,5332373],50000:[4554689,8959762],100000:[9171419,18041570]},
+    '48-57': {25000:[2201781,4331231],30000:[2644228,5201597],50000:[4442985,8740023],100000:[8969552,17644466]},
+    '58-65': {25000:[2028518,3990403],30000:[2436300,4792571],50000:[4093613,8052755],100000:[8263719,16255986]}
+  },
+  15: {
+    '18-27': {25000:[2135070,4200005],30000:[2575389,5066180],50000:[4327360,8512572],100000:[8697783,17109856]},
+    '28-37': {25000:[2095904,4122961],30000:[2521031,4959249],50000:[4236024,8332900],100000:[8538233,16795997]},
+    '38-47': {25000:[2088811,4109007],30000:[2514777,4946947],50000:[4225516,8312229],100000:[8509336,16739152]},
+    '48-57': {25000:[2042835,4018566],30000:[2453102,4825623],50000:[4121885,8108371],100000:[8322041,16370715]},
+    '58-65': {25000:[1882080,3702336],30000:[2260203,4446162],50000:[3767762,7470773],100000:[7667162,15082468]}
+  },
+  20: {
+    '18-27': {25000:[1991317,3917221],30000:[2401802,4724709],50000:[4065663,7938760],100000:[8112167,15957860]},
+    '28-37': {25000:[1954788,3845365],30000:[2351108,4624985],50000:[3950483,7771199],100000:[7963359,15665133]},
+    '38-47': {25000:[1948173,3832350],30000:[2345276,4613513],50000:[3940684,7751921],100000:[7936408,15612116]},
+    '48-57': {25000:[1905292,3747998],30000:[2287758,4500366],50000:[3844038,7561805],100000:[7761724,15268485]},
+    '58-65': {25000:[1755361,3453060],30000:[2107861,4146482],50000:[3541764,6967186],100000:[7150937,14066976]}
+  },
+  25: { /* Corrected values per actuarial table */
+    '18-27': {25000:[1865700,3670115],30000:[2250138,4426361],50000:[3780876,7437555],100000:[7600435,14951205]},
+    '28-37': {25000:[1831476,3602791],30000:[2202645,4332935],50000:[3701074,7280572],100000:[7461014,14676944]},
+    '38-47': {25000:[1825278,3590598],30000:[2197181,4322187],50000:[3691893,7262512],100000:[7435763,14627271]},
+    '48-57': {25000:[1785103,3511567],30000:[2143295,4216185],50000:[3601349,7084398],100000:[7272098,14305317]},
+    '58-65': {25000:[1644629,3235234],30000:[1974758,3884647],50000:[3318158,6527320],100000:[6699841,13179601]}
+  }
+};
+
+/* -- State -- */
+let phinduQuoteMode = 'prem';
+let phinduQuoteData = null;
+let phinduAnb = null;
+let phinduPropData = null;
+let phinduBenefCount = 0;
+
+/* -- Init -- */
+function initPhinduTab(){
+  const el = document.getElementById('phindu-doq');
+  if(el && !el.value){
+    const t = new Date();
+    el.value = t.getFullYear()+'-'+String(t.getMonth()+1).padStart(2,'0')+'-'+String(t.getDate()).padStart(2,'0');
+  }
+}
+
+/* -- Mode toggle -- */
+function phinduSetMode(m){
+  phinduQuoteMode = m;
+  ['prem','sa'].forEach(x=>{
+    document.getElementById('phindu-tab-'+x).classList.toggle('active',x===m);
+  });
+  document.getElementById('phindu-prem-area').style.display = m==='prem' ? '' : 'none';
+  document.getElementById('phindu-sa-area').style.display  = m==='sa'   ? '' : 'none';
+}
+
+/* -- Age band -- */
+function phinduGetBand(anb){
+  if(anb>=18&&anb<=27)return '18-27';
+  if(anb>=28&&anb<=37)return '28-37';
+  if(anb>=38&&anb<=47)return '38-47';
+  if(anb>=48&&anb<=57)return '48-57';
+  if(anb>=58&&anb<=65)return '58-65';
+  return null;
+}
+
+/* -- ANB calculation -- */
+function phinduCalcAnb(dob){
+  const d=new Date(dob), today=new Date();
+  let age=today.getFullYear()-d.getFullYear();
+  if(today.getMonth()<d.getMonth()||(today.getMonth()===d.getMonth()&&today.getDate()<d.getDate()))age--;
+  const next=new Date(d); next.setFullYear(today.getFullYear());
+  if(next<today)next.setFullYear(today.getFullYear()+1);
+  const prev=new Date(next); prev.setFullYear(next.getFullYear()-1);
+  return (next-today)<=(today-prev)?age+1:age;
+}
+
+/* -- DOB live check -- */
+function phinduCheckAge(){
+  const dob=document.getElementById('phindu-dob').value;
+  const errEl=document.getElementById('phindu-age-err');
+  const pillEl=document.getElementById('phindu-anb-pill');
+  if(!dob){errEl.style.display='none';pillEl.style.display='none';return;}
+  const anb=phinduCalcAnb(dob), band=phinduGetBand(anb);
+  if(!band){errEl.style.display='block';pillEl.style.display='none';}
+  else{errEl.style.display='none';pillEl.textContent='ANB: '+anb+' · Age Band: '+band;pillEl.style.display='block';}
+}
+
+/* -- Interpolation engine -- */
+function phinduInterp(mt, band, prem){
+  const pts=[25000,30000,50000,100000];
+  const d=PHINDU_DATA[mt][band];
+  if(prem<=25000){const r=prem/25000;return[d[25000][0]*r,d[25000][1]*r];}
+  for(let i=0;i<pts.length-1;i++){
+    if(prem<=pts[i+1]){
+      const t=(prem-pts[i])/(pts[i+1]-pts[i]);
+      return[d[pts[i]][0]+t*(d[pts[i+1]][0]-d[pts[i]][0]),
+             d[pts[i]][1]+t*(d[pts[i+1]][1]-d[pts[i]][1])];
+    }
+  }
+  /* extrapolate beyond 100k using 50k→100k slope */
+  const slopeA=(d[100000][0]-d[50000][0])/50000;
+  const slopeB=(d[100000][1]-d[50000][1])/50000;
+  return[d[100000][0]+slopeA*(prem-100000), d[100000][1]+slopeB*(prem-100000)];
+}
+
+/* -- Reverse: SA → Premium (binary search) -- */
+function phinduInvPrem(mt, band, targetSA){
+  let lo=PHINDU_MIN_PREM, hi=PHINDU_MAX_PREM;
+  for(let i=0;i<60;i++){
+    const mid=(lo+hi)/2;
+    phinduInterp(mt,band,mid)[0]<targetSA?lo=mid:hi=mid;
+  }
+  return Math.round((lo+hi)/2);
+}
+
+/* -- Name assembly -- */
+function phinduName(){
+  const f=(document.getElementById('phindu-fname').value||'').trim();
+  const m=(document.getElementById('phindu-mname').value||'').trim();
+  const l=(document.getElementById('phindu-lname').value||'').trim();
+  return[f,m,l].filter(Boolean).join(' ');
+}
+
+/* -- Quote engine: Premium → SA -- */
+function phinduGenerateQuote(){
+  const name=phinduName(), dob=document.getElementById('phindu-dob').value;
+  const premRaw=parseFloat(document.getElementById('phindu-prem').value);
+  const mt=parseInt(document.getElementById('phindu-mt').value);
+  const gender=document.getElementById('phindu-gender').value;
+  if(!name){showToast('Client name required');return;}
+  if(!dob){showToast('Date of birth required');return;}
+  if(!premRaw||isNaN(premRaw)){showToast('Enter monthly premium');return;}
+  if(premRaw<PHINDU_MIN_PREM){showToast('Min premium: MWK 25,000');return;}
+  if(premRaw>PHINDU_MAX_PREM){showToast('Max premium: MWK 500,000');return;}
+  const anb=phinduCalcAnb(dob), band=phinduGetBand(anb);
+  if(!band){showToast('Age must be 18–65');return;}
+  phinduAnb=anb;
+  const[basicSA,saWithBonus]=phinduInterp(mt,band,premRaw);
+  phinduBuildAndShow(name,dob,gender,anb,band,premRaw,mt,basicSA,saWithBonus,'prem');
+}
+
+/* -- Quote engine: SA → Premium -- */
+function phinduGenerateQuote2(){
+  const name=phinduName(), dob=document.getElementById('phindu-dob').value;
+  const tSA=parseFloat(document.getElementById('phindu-target-sa').value);
+  const mt=parseInt(document.getElementById('phindu-mt').value);
+  const gender=document.getElementById('phindu-gender').value;
+  if(!name){showToast('Client name required');return;}
+  if(!dob){showToast('Date of birth required');return;}
+  if(!tSA||isNaN(tSA)||tSA<=0){showToast('Enter target Sum Assured');return;}
+  const anb=phinduCalcAnb(dob), band=phinduGetBand(anb);
+  if(!band){showToast('Age must be 18–65');return;}
+  phinduAnb=anb;
+  const[maxSA]=phinduInterp(mt,band,PHINDU_MAX_PREM);
+  if(tSA>maxSA){showToast('Max achievable SA: MWK '+Math.round(maxSA).toLocaleString());return;}
+  const prem=phinduInvPrem(mt,band,tSA);
+  if(prem<PHINDU_MIN_PREM){showToast('Target SA too low — min premium is MWK 25,000');return;}
+  const[basicSA,saWithBonus]=phinduInterp(mt,band,prem);
+  phinduBuildAndShow(name,dob,gender,anb,band,prem,mt,basicSA,saWithBonus,'sa');
+}
+
+/* -- Common build + show -- */
+function phinduBuildAndShow(name,dob,gender,anb,band,prem,mt,basicSA,saWithBonus,mode){
+  const mtBenefit  = Math.round(mt/100*basicSA);
+  const maturity   = Math.round(saWithBonus+mtBenefit);      // year-10 payout
+  const totalRcpts = Math.round(saWithBonus+2*mtBenefit);    // all payouts incl year-5
+  const totalPrems = Math.round(prem*12*PHINDU_TERM);
+  const profit     = totalRcpts - totalPrems;
+  const ref='PHN-'+new Date().toISOString().slice(0,10).replace(/-/g,'')+'-'+Math.floor(1000+Math.random()*9000);
+  phinduQuoteData={ref,savedAt:new Date().toISOString(),agent:currentAgent,name,dob,gender,anb,band,
+    premium:Math.round(prem),mt,basicSA:Math.round(basicSA),saWithBonus:Math.round(saWithBonus),
+    mtBenefit,maturity,totalReceipts:totalRcpts,totalPremiums:totalPrems,profit,mode};
+  const pill=document.getElementById('phindu-anb-pill');
+  if(pill){pill.textContent='ANB: '+anb+' · Band: '+band;pill.style.display='block';}
+  phinduRenderDoc(phinduQuoteData);
+  document.getElementById('phindu-quote-output').style.display='block';
+  document.getElementById('phindu-gen-btn').style.display='none';
+  const ab=document.getElementById('app-body'), out=document.getElementById('phindu-quote-output');
+  if(ab&&out)ab.scrollTop=out.offsetTop-10;
+  phinduSaveSync();
+}
+
+/* -- Render quote document (compact, PSP brand style) -- */
+function phinduRenderDoc(q){
+  const el=document.getElementById('phindu-q-doc');
+  if(!el)return;
+  const logoEl=document.querySelector('.q-lh-logo');
+  const logoSrc=logoEl?logoEl.src:'';
+  const f=v=>'MWK '+Math.round(v).toLocaleString();
+  const ck='<div class="feat-dot"><svg viewBox="0 0 10 10" fill="none"><path d="M2 5l2 2 4-4" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/></svg></div>';
+  const {mobile:agMobile}=loadProfileData();
+  const doqFmt=fmtDate(q.savedAt.split('T')[0]);
+
+  /* -- Shared row builder: fixed-width columns, no flex-shrink distortion -- */
+  function row(lbl, val, bold){
+    return '<div style="display:flex;justify-content:space-between;align-items:baseline;padding:5px 0;border-bottom:1px solid #f2e9ea">'+
+      '<span style="font-size:11px;color:#888;font-weight:600;text-transform:uppercase;letter-spacing:.03em">'+lbl+'</span>'+
+      '<span style="font-size:'+(bold?'14':'13')+'px;font-weight:'+(bold?'800':'700')+';color:var(--M);white-space:nowrap;padding-left:8px">'+val+'</span>'+
+    '</div>';
+  }
+  function rowAccent(lbl, val){
+    return '<div style="display:flex;justify-content:space-between;align-items:baseline;padding:6px 0 4px">'+
+      '<span style="font-size:12px;font-weight:700;color:var(--M)">'+lbl+'</span>'+
+      '<span style="font-size:15px;font-weight:800;color:var(--M);white-space:nowrap;padding-left:8px">'+val+'</span>'+
+    '</div>';
+  }
+
+  el.innerHTML=
+    /* ── Letterhead ── */
+    '<div class="q-letterhead">'+
+      '<div class="q-lh-top">'+
+        (logoSrc?'<img class="q-lh-logo" src="'+logoSrc+'" alt="VLA">':'')+
+        '<div class="q-lh-company">'+
+          '<div class="q-lh-tagline">Life Assurance &nbsp;&middot;&nbsp; Pension Services</div>'+
+          '<div class="q-lh-web">&#127760; vanguardlifemw.com</div>'+
+        '</div>'+
+      '</div>'+
+      '<div class="q-lh-address">'+
+        '<div class="q-lh-addr-col"><span class="q-lh-icon">&#127968;</span><span>Robins Road, P.O. Box 1625, Blantyre, Malawi</span></div>'+
+        '<div class="q-lh-addr-col"><span class="q-lh-icon">&#128241;</span><span>+265 887 094 872</span></div>'+
+        '<div class="q-lh-addr-col"><span class="q-lh-icon">&#9993;</span><span>info@vanguardlifemw.com</span></div>'+
+        '<div class="q-lh-addr-col"><span class="q-lh-icon">&#127760;</span><span>vanguardlifemw.com</span></div>'+
+      '</div>'+
+      '<div class="q-lh-divider"></div>'+
+    '</div>'+
+
+    /* ── QUOTATION title band ── */
+    '<div class="q-title-band">'+
+      '<div>'+
+        '<div class="q-title-word">Quotation</div>'+
+        '<div style="font-size:9px;color:rgba(255,255,255,.6);margin-top:2px;letter-spacing:.06em;text-transform:uppercase">Phindu Savings Plan &nbsp;&middot;&nbsp; 10-Year Endowment (With Profits)</div>'+
+      '</div>'+
+      '<div class="q-title-ref">'+
+        '<div class="q-title-refnum">Ref: '+q.ref+'</div>'+
+        '<div class="q-title-date">'+doqFmt+'</div>'+
+      '</div>'+
+    '</div>'+
+
+    /* ── Body ── */
+    '<div class="qbody">'+
+
+      /* Client block — compact inline */
+      '<div style="display:flex;align-items:center;gap:8px;padding:4px 0 10px;border-bottom:1px solid #f2e9ea;margin-bottom:10px">'+
+        '<div class="cli-av" style="width:32px;height:32px;flex-shrink:0;font-size:12px">'+
+          q.name.split(' ').map(function(p){return p[0]||'';}).join('').slice(0,2).toUpperCase()+
+        '</div>'+
+        '<div style="min-width:0">'+
+          '<div style="font-size:13px;font-weight:700;color:var(--M);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">'+
+            q.name+(q.gender?' <span style="font-size:11px;font-weight:400;color:#888">('+q.gender+')</span>':'')+
+          '</div>'+
+          '<div style="font-size:11px;color:#888;margin-top:1px">DOB: '+fmtDate(q.dob)+' &nbsp;&middot;&nbsp; ANB: '+q.anb+'</div>'+
+        '</div>'+
+      '</div>'+
+
+      /* Single combined card: policy + benefits */
+      '<div class="opt-card" style="margin-bottom:8px">'+
+        /* Maroon header */
+        '<div class="opt-card-head head-a">'+
+          '<div>'+
+            '<div class="opt-card-badge">Phindu Savings Plan</div>'+
+            '<div class="opt-card-title">Policy Summary &amp; Benefits</div>'+
+          '</div>'+
+        '</div>'+
+        '<div class="opt-card-body">'+
+          row('Monthly Premium',   f(q.premium))+
+          row('Annual Premium',    f(q.premium*12))+
+          row('Policy Term',       '10 Years')+
+          row('Money Tree Option', q.mt+'% of Basic SA')+
+          '<div style="height:6px"></div>'+
+          row('Basic Sum Assured',      f(q.basicSA))+
+          row('SA + Bonus at Maturity', f(q.saWithBonus))+
+          row('Money Tree — Year 5',    f(q.mtBenefit))+
+          row('Money Tree — Year 10',   f(q.mtBenefit))+
+          '<div style="border-top:1.5px solid var(--M);margin-top:4px;padding-top:4px">'+
+            row('Total Estimated Returns', f(q.totalReceipts), true)+
+          '</div>'+
+        '</div>'+
+      '</div>'+
+
+      /* Phindu profit strip — brand colors, compact */
+      '<div style="background:var(--ML);border:1px solid #e8c8c8;border-radius:var(--RB);padding:8px 12px;margin-bottom:8px">'+
+        '<div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--M);margin-bottom:6px">Phindu — Your Profit</div>'+
+        '<div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:4px;text-align:center">'+
+          '<div style="padding:6px 4px;background:#fff;border-radius:4px">'+
+            '<div style="font-size:9px;color:#888;text-transform:uppercase;letter-spacing:.03em;margin-bottom:3px">Premiums Paid</div>'+
+            '<div style="font-size:12px;font-weight:700;color:var(--M)">'+f(q.totalPremiums)+'</div>'+
+          '</div>'+
+          '<div style="padding:6px 4px;background:#fff;border-radius:4px">'+
+            '<div style="font-size:9px;color:#888;text-transform:uppercase;letter-spacing:.03em;margin-bottom:3px">Total Returns</div>'+
+            '<div style="font-size:12px;font-weight:700;color:var(--M)">'+f(q.totalReceipts)+'</div>'+
+          '</div>'+
+          '<div style="padding:6px 4px;background:var(--M);border-radius:4px">'+
+            '<div style="font-size:9px;color:rgba(216,201,180,.8);text-transform:uppercase;letter-spacing:.03em;margin-bottom:3px">Your Profit</div>'+
+            '<div style="font-size:12px;font-weight:800;color:var(--CR)">'+f(q.profit)+'</div>'+
+          '</div>'+
+        '</div>'+
+      '</div>'+
+
+      /* Features — compact no-box version */
+      '<div class="feat-box">'+
+        '<div class="feat-title">Key product features</div>'+
+        '<div class="feat-item">'+ck+'<div class="feat-txt"><strong>Maturity:</strong> <span>SA + declared bonuses at Year 10.</span></div></div>'+
+        '<div class="feat-item">'+ck+'<div class="feat-txt"><strong>Money Tree:</strong> <span>'+q.mt+'% of SA paid at Year 5 and Year 10.</span></div></div>'+
+        '<div class="feat-item">'+ck+'<div class="feat-txt"><strong>Death benefit:</strong> <span>SA + bonuses. Yrs 1–3: premiums refunded + 4% p.a.</span></div></div>'+
+        '<div class="feat-item">'+ck+'<div class="feat-txt"><strong>Surrender/paid-up:</strong> <span>Available after 2 full years. No medical tests. Age 18–65.</span></div></div>'+
+      '</div>'+
+
+      /* Disclaimer */
+      '<div class="disclaimer">Indicative quotation only. Subject to underwriting and actual bonus declarations — <strong>not guaranteed</strong>. Regulated by Reserve Bank of Malawi. <strong>Full T&amp;Cs apply.</strong> Call <strong>3043</strong> for policy terms.</div>'+
+
+    '</div>'+
+
+    /* ── PSP-style footer ── */
+    '<div class="qfoot">'+
+      '<div style="display:flex;align-items:center;gap:14px;flex:1;flex-wrap:wrap">'+
+        '<div>'+
+          '<div class="qf-contact">Robins Road, P.O. Box 1625, Blantyre, Malawi</div>'+
+          '<div class="qf-left">&#128241; +265 887 094 872 &nbsp;&middot;&nbsp; &#9993; info@vanguardlifemw.com &nbsp;&middot;&nbsp; &#127760; vanguardlifemw.com</div>'+
+        '</div>'+
+      '</div>'+
+      '<div style="text-align:right;flex-shrink:0">'+
+        '<div style="font-size:10px;color:var(--CR);font-weight:700;letter-spacing:.05em;text-transform:uppercase">Life Assurance &nbsp;&middot;&nbsp; Pension Services</div>'+
+        '<div style="font-size:9px;color:rgba(255,255,255,.75);margin-top:3px">'+
+          'Agent: '+q.agent+
+          (agMobile?'<br>&#128241; '+agMobile:'')+
+          '<br>Alt: 3043 (VLA)<br>'+doqFmt+
+        '</div>'+
+      '</div>'+
+    '</div>';
+}
+
+
+/* -- Save + sync -- */
+function phinduSaveSync(){
+  if(!phinduQuoteData)return;
+  const quotes=JSON.parse(localStorage.getItem(PHINDU_QUOTES_KEY)||'[]');
+  if(!quotes.find(q=>q.ref===phinduQuoteData.ref)){
+    quotes.unshift(phinduQuoteData);
+    localStorage.setItem(PHINDU_QUOTES_KEY,JSON.stringify(quotes));
+    sessionQuoteCount=(sessionQuoteCount||0)+1;
+  }
+  const url=localStorage.getItem('vla_sheets_url');
+  if(!url)return;
+  const ss=document.getElementById('phindu-sync-status');
+  fetch(url,{method:'POST',body:JSON.stringify({action:'logPhinduQuote',data:phinduQuoteData})})
+    .then(r=>r.json()).then(()=>{if(ss){ss.textContent='\u2713 Saved to Google Sheets';ss.style.color='#16a34a';ss.style.display='block';}})
+    .catch(()=>{if(ss){ss.textContent='\u26a0 Saved locally only';ss.style.color='#d97706';ss.style.display='block';}});
+}
+
+/* -- Reset -- */
+function phinduResetQuote(){
+  phinduQuoteData=null; phinduAnb=null;
+  ['phindu-fname','phindu-mname','phindu-lname','phindu-prem','phindu-target-sa'].forEach(id=>{const e=document.getElementById(id);if(e)e.value='';});
+  document.getElementById('phindu-dob').value='';
+  document.getElementById('phindu-gender').value='';
+  document.getElementById('phindu-mt').value='10';
+  ['phindu-anb-pill','phindu-quote-output','phindu-sync-status','phindu-age-err'].forEach(id=>{const e=document.getElementById(id);if(e)e.style.display='none';});
+  document.getElementById('phindu-gen-btn').style.display='flex';
+  phinduSetMode('prem');
+  const ab=document.getElementById('app-body');if(ab)ab.scrollTop=0;
+  showToast('Ready for new Phindu quote');
+}
+
+/* -- Sharing -- */
+function phinduShareWA(){
+  if(!phinduQuoteData){showToast('Generate a quote first');return;}
+  captureQuoteImageFromEl(document.getElementById('phindu-q-doc'),canvas=>{
+    const link=document.createElement('a');
+    link.download='VLA-Phindu-'+phinduQuoteData.ref+'.png';
+    link.href=canvas.toDataURL('image/png');link.click();
+    const q=phinduQuoteData, f=v=>'MWK '+Math.round(v).toLocaleString();
+    const msg='*Vanguard Life Assurance \u2014 Phindu Savings Plan*\n\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\n\uD83D\uDCCB Ref: '+q.ref+'\n\uD83D\uDC64 Client: *'+q.name+'*\n\n*Monthly Premium:* '+f(q.premium)+'\n*Money Tree:* '+q.mt+'% of SA \u00b7 10-Year Term\n\n*Basic Sum Assured:* '+f(q.basicSA)+'\n*SA + Bonus at Maturity:* '+f(q.saWithBonus)+'\n*Money Tree (Year 5 & 10):* '+f(q.mtBenefit)+' each\n*Total Returns: '+f(q.totalReceipts)+'*\n\n\uD83D\uDCB0 *Your Phindu (Profit): '+f(q.profit)+'*\n\nVanguard Life Assurance | vanguardlifemw.com';
+    setTimeout(()=>window.open('https://wa.me/?text='+encodeURIComponent(msg),'_blank'),1500);
+  });
+}
+
+function phinduShareSMS(){
+  if(!phinduQuoteData){showToast('Generate a quote first');return;}
+  const q=phinduQuoteData, f=v=>'MWK '+Math.round(v).toLocaleString();
+  const msg='VLA Phindu Savings Plan\nRef: '+q.ref+'\nClient: '+q.name+'\nPremium: '+f(q.premium)+'/mo | MT: '+q.mt+'%\nBasic SA: '+f(q.basicSA)+'\nTotal Returns: '+f(q.totalReceipts)+'\nProfit: '+f(q.profit)+'\nCall 3043 (VLA Call Centre)';
+  window.location.href='sms:?body='+encodeURIComponent(msg);
+}
+
+function phinduShareEmail(){
+  if(!phinduQuoteData){showToast('Generate a quote first');return;}
+  const q=phinduQuoteData, f=v=>'MWK '+Math.round(v).toLocaleString();
+  const sub='Phindu Savings Plan Quote — '+q.name+' ('+q.ref+')';
+  const body='Dear '+q.name+',\n\nPlease find your Phindu Savings Plan quote below:\n\nRef: '+q.ref+'\nDate: '+fmtDate(q.savedAt.split('T')[0])+'\nAgent: '+q.agent+'\n\nPOLICY DETAILS\nMonthly Premium: '+f(q.premium)+'\nMoney Tree Option: '+q.mt+'% of Basic Sum Assured\nPolicy Term: 10 Years\n\nBENEFITS\nBasic Sum Assured: '+f(q.basicSA)+'\nSA + Bonus at Maturity: '+f(q.saWithBonus)+'\nMoney Tree Benefit (Year 5): '+f(q.mtBenefit)+'\nMoney Tree Benefit (Year 10): '+f(q.mtBenefit)+'\nTotal Estimated Returns: '+f(q.totalReceipts)+'\n\nPHINDU (YOUR PROFIT)\nTotal Premiums Paid: '+f(q.totalPremiums)+'\nTotal Returns: '+f(q.totalReceipts)+'\nYour Profit: '+f(q.profit)+'\n\nNote: Final benefits subject to bonus declarations and policy terms.\n\nRegards,\n'+q.agent+'\nVanguard Life Assurance\nvanguardlifemw.com';
+  window.location.href='mailto:?subject='+encodeURIComponent(sub)+'&body='+encodeURIComponent(body);
+}
+
+function phinduPrintQuote(){
+  if(!phinduQuoteData){showToast('Generate a quote first');return;}
+  captureQuotePDF('phindu-q-doc','VLA-Phindu-'+phinduQuoteData.ref+'.pdf',function(pdf,fn){pdf.save(fn);});
+}
+
+/* -- History -- */
+function renderPhinduHistory(){
+  const list=document.getElementById('phindu-hist-list');
+  if(!list)return;
+  const quotes=JSON.parse(localStorage.getItem(PHINDU_QUOTES_KEY)||'[]');
+  const mine=isAdmin?quotes:quotes.filter(q=>q.agent===currentAgent);
+  const cEl=document.getElementById('phindu-hist-count');
+  if(cEl)cEl.textContent=mine.length+' quote'+(mine.length!==1?'s':'');
+  if(!mine.length){list.innerHTML='<div class="empty-state"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/><line x1="2" y1="20" x2="22" y2="20"/></svg><p>No Phindu quotes yet.</p></div>';return;}
+  const f=v=>'MWK '+Math.round(v).toLocaleString();
+  list.innerHTML=mine.map(q=>{
+    const badge='<span style="font-size:10px;padding:2px 8px;border-radius:10px;font-weight:600;background:#fef3c7;color:#92400e">'+q.mt+'% MT</span>';
+    return '<div class="hist-item" onclick="openPhinduHist(\''+q.ref+'\')" style="cursor:pointer">'+
+      '<div style="flex:1">'+
+        '<div style="font-size:13px;font-weight:700;color:var(--T);margin-bottom:2px">'+q.name+'</div>'+
+        '<div style="font-size:11px;color:var(--T2)">'+fmtDate(q.savedAt.split('T')[0])+' &nbsp;|&nbsp; ANB '+q.anb+' &nbsp;|&nbsp; Band '+q.band+'</div>'+
+        '<div style="font-size:11px;margin-top:3px">Premium: <strong>'+f(q.premium)+'</strong> &nbsp;|&nbsp; SA: <strong>'+f(q.basicSA)+'</strong></div>'+
+        '<div style="font-size:11px;color:#16a34a;font-weight:600;margin-top:2px">Profit: '+f(q.profit)+'</div>'+
+      '</div>'+
+      '<div style="text-align:right;flex-shrink:0">'+badge+'<div style="font-size:10px;color:var(--T2);margin-top:4px">'+q.ref+'</div></div>'+
+    '</div>';
+  }).join('');
+}
+
+function openPhinduHist(ref){
+  const quotes=JSON.parse(localStorage.getItem(PHINDU_QUOTES_KEY)||'[]');
+  const q=quotes.find(x=>x.ref===ref);
+  if(!q){showToast('Quote not found');return;}
+  phinduQuoteData=q;
+  switchTab('phindu');
+  setTimeout(()=>{
+    phinduRenderDoc(q);
+    document.getElementById('phindu-gen-btn').style.display='none';
+    document.getElementById('phindu-quote-output').style.display='block';
+    const ab=document.getElementById('app-body'),out=document.getElementById('phindu-quote-output');
+    if(ab&&out)ab.scrollTop=out.offsetTop-10;
+    showToast('Loaded: '+ref,2500);
+  },200);
+}
+
+/* ── PHINDU PROPOSAL ── */
+function phinduPropInit(){
+  /* Pre-fill from current quote if available */
+  if(phinduQuoteData){
+    const q=phinduQuoteData;
+    const parts=q.name.split(' ');
+    const setVal=(id,v)=>{const e=document.getElementById(id);if(e)e.value=v||'';};
+    setVal('pp-fname',parts[0]||'');
+    setVal('pp-mname',parts.length>2?parts.slice(1,-1).join(' '):'');
+    setVal('pp-lname',parts.length>1?parts[parts.length-1]:'');
+    setVal('pp-dob',q.dob);
+    const g=document.getElementById('pp-gender');if(g)g.value=q.gender||'';
+    setVal('pp-premium',q.premium);
+    const mt=document.getElementById('pp-mt');if(mt)mt.value=q.mt;
+    const notice=document.getElementById('phindu-prop-prefill-notice');if(notice)notice.style.display='block';
+  }
+  /* Ensure at least one beneficiary row */
+  const bc=document.getElementById('pp-benef-container');
+  if(bc&&!bc.children.length)phinduAddBenef();
+}
+
+function phinduAddBenef(){
+  phinduBenefCount++;
+  const n=phinduBenefCount;
+  const div=document.createElement('div');
+  div.id='pp-benef-'+n;
+  div.style.cssText='background:#f9fafb;border-radius:8px;padding:10px;margin-bottom:8px';
+  div.innerHTML=
+    '<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px">'+
+      '<span style="font-size:12px;font-weight:600;color:var(--M)">Beneficiary '+n+'</span>'+
+      (n>1?'<button onclick="document.getElementById(\'pp-benef-'+n+'\').remove();phinduUpdateShareTotal()" style="background:none;border:none;color:#dc2626;cursor:pointer;font-size:12px">Remove</button>':'')+
+    '</div>'+
+    '<div class="f-row">'+
+      '<div class="f-col"><label class="f-lbl">Full Name</label><input id="pp-bn-'+n+'" class="f-inp" type="text" placeholder="Beneficiary name" onchange="phinduUpdateShareTotal()"></div>'+
+      '<div class="f-col"><label class="f-lbl">Relationship</label><input id="pp-br-'+n+'" class="f-inp" type="text" placeholder="e.g. Spouse"></div>'+
+    '</div>'+
+    '<div class="f-row">'+
+      '<div class="f-col"><label class="f-lbl">Date of Birth</label><input id="pp-bd-'+n+'" class="f-inp" type="date"></div>'+
+      '<div class="f-col"><label class="f-lbl">Share %</label><input id="pp-bs-'+n+'" class="f-inp" type="number" placeholder="e.g. 100" min="1" max="100" onchange="phinduUpdateShareTotal()"></div>'+
+    '</div>';
+  document.getElementById('pp-benef-container').appendChild(div);
+  phinduUpdateShareTotal();
+}
+
+function phinduUpdateShareTotal(){
+  let total=0;
+  for(let i=1;i<=phinduBenefCount;i++){
+    const el=document.getElementById('pp-bs-'+i);if(el)total+=parseFloat(el.value)||0;
+  }
+  const st=document.getElementById('pp-share-total');
+  if(st){
+    st.textContent='Total share: '+total+'%';
+    st.style.color=total===100?'#16a34a':total>100?'#dc2626':'#d97706';
+  }
+}
+
+function phinduPropSubmit(){
+  const getVal=id=>{const e=document.getElementById(id);return e?e.value.trim():'';};
+  const name=[getVal('pp-fname'),getVal('pp-mname'),getVal('pp-lname')].filter(Boolean).join(' ');
+  if(!name){showToast('Client name required');return;}
+  if(!getVal('pp-dob')){showToast('Date of birth required');return;}
+  if(!getVal('pp-phone')){showToast('Phone number required');return;}
+  if(!getVal('pp-premium')){showToast('Monthly premium required');return;}
+  if(!document.getElementById('pp-decl-client').checked){showToast('Client declaration required');return;}
+  if(!document.getElementById('pp-decl-agent').checked){showToast('Agent declaration required');return;}
+  /* Collect beneficiaries */
+  const beneficiaries=[];
+  for(let i=1;i<=phinduBenefCount;i++){
+    const bn=getVal('pp-bn-'+i);
+    if(bn)beneficiaries.push({name:bn,relationship:getVal('pp-br-'+i),dob:getVal('pp-bd-'+i),share:getVal('pp-bs-'+i)});
+  }
+  const ref='PHN-PROP-'+new Date().toISOString().slice(0,10).replace(/-/g,'')+'-'+Math.floor(1000+Math.random()*9000);
+  phinduPropData={ref,submittedAt:new Date().toISOString(),agent:currentAgent,
+    name,dob:getVal('pp-dob'),gender:getVal('pp-gender'),nationality:getVal('pp-nationality'),
+    phone:getVal('pp-phone'),email:getVal('pp-email'),address:getVal('pp-address'),
+    idType:getVal('pp-id-type'),idNum:getVal('pp-id-num'),
+    premium:getVal('pp-premium'),mt:getVal('pp-mt'),
+    commence:getVal('pp-commence'),branch:getVal('pp-branch'),payment:getVal('pp-payment'),
+    beneficiaries,quoteRef:phinduQuoteData?phinduQuoteData.ref:''};
+  /* Save locally */
+  const props=JSON.parse(localStorage.getItem(PHINDU_PROPOSALS_KEY)||'[]');
+  props.unshift(phinduPropData);
+  localStorage.setItem(PHINDU_PROPOSALS_KEY,JSON.stringify(props));
+  /* Show success */
+  document.getElementById('pp-submit-btn').style.display='none';
+  document.getElementById('pp-success').style.display='block';
+  document.getElementById('pp-ref-display').textContent='Ref: '+ref;
+  /* Sync to Sheets */
+  const url=localStorage.getItem('vla_sheets_url');
+  if(url)fetch(url,{method:'POST',body:JSON.stringify({action:'logPhinduProposal',data:phinduPropData})}).catch(()=>{});
+  const ab=document.getElementById('app-body'),suc=document.getElementById('pp-success');
+  if(ab&&suc)ab.scrollTop=suc.offsetTop-10;
+  showToast('Phindu proposal submitted!',3000);
+}
+
+function phinduPropReset(){
+  phinduPropData=null;phinduBenefCount=0;
+  document.querySelectorAll('#tab-phindu-proposal .f-inp').forEach(el=>{
+    if(el.tagName==='SELECT')el.selectedIndex=0;
+    else if(el.type==='checkbox')el.checked=false;
+    else el.value='';
+  });
+  document.getElementById('pp-decl-client').checked=false;
+  document.getElementById('pp-decl-agent').checked=false;
+  document.getElementById('pp-benef-container').innerHTML='';
+  document.getElementById('pp-success').style.display='none';
+  document.getElementById('pp-submit-btn').style.display='flex';
+  const notice=document.getElementById('phindu-prop-prefill-notice');if(notice)notice.style.display='none';
+  phinduBenefCount=0;phinduAddBenef();
+  const ab=document.getElementById('app-body');if(ab)ab.scrollTop=0;
+}
+
 </script>
-</body>
-</html>
