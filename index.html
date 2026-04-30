@@ -1847,8 +1847,8 @@ input:checked+.tog-trk:before{transform:translateX(17px)}
           <div style="width:40px;height:40px;background:#16a34a;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 10px">
             <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
           </div>
-          <div style="font-size:15px;font-weight:700;color:#16a34a">Proposal Submitted</div>
-          <div style="font-size:12px;color:#166534;margin-top:4px">Saved to database · Team Leader notified</div>
+          <div id="prop-success-title" style="font-size:15px;font-weight:700;color:#16a34a">Proposal Submitted</div>
+          <div id="prop-success-sub" style="font-size:12px;color:#166534;margin-top:4px">Saved to database · Team Leader notified</div>
           <div style="font-size:11px;color:#166534;font-weight:600;margin-top:8px;background:#dcfce7;padding:4px 12px;border-radius:20px;display:inline-block" id="prop-ref-display">Ref: —</div>
         </div>
         <!-- Action buttons -->
@@ -2584,6 +2584,8 @@ async function doLogin(){
   if(agent && agent.active && agent.pin===pin){
     currentAgent=user;
     isAdmin=(agent.role==='admin');
+    // Render home dashboard BEFORE screen becomes visible — prevents stale HTML flash
+    renderHomeDash();
     err.style.display='none';
     document.getElementById('screen-login').classList.remove('active');
     document.getElementById('screen-app').classList.add('active');
@@ -2599,6 +2601,8 @@ async function doLogin(){
     loadProfileData();
     // Start on home dashboard
     switchTab('home');
+    // Re-run renderHomeDash after reflow settles (belt-and-braces)
+    setTimeout(renderHomeDash, 80);
     showToast('Welcome, '+user+'!');
   } else {
     err.style.display='block';
@@ -4432,6 +4436,11 @@ function openMyHistModal(q){
   // Switch to MY tab and render the quote
   switchTab('manga-yako');
   setTimeout(()=>{
+    // Clear stale form fields so nothing old shows above the quote output
+    ['my-fname','my-mname','my-lname','my-phone','my-email','my-city','my-country','my-tmv','my-prem']
+      .forEach(id=>{const el=document.getElementById(id);if(el)el.value='';});
+    const gEl=document.getElementById('my-gender');if(gEl)gEl.value='';
+    const dEl=document.getElementById('my-dob');if(dEl)dEl.value='';
     myRenderQuoteDoc(q);
     document.getElementById('my-quote-output').style.display='block';
     document.getElementById('my-gen-btn').style.display='none';
@@ -4944,8 +4953,18 @@ function myPropReset(){
   const manTMV = document.getElementById('prop-tmv-manual');
   if(manPrem) manPrem.value='';
   if(manTMV) manTMV.value='';
+  // Clear declaration checkboxes (not covered by .f-inp selector)
+  const dclClient = document.getElementById('prop-decl-client');
+  const dclAgent  = document.getElementById('prop-decl-agent');
+  if(dclClient) dclClient.checked = false;
+  if(dclAgent)  dclAgent.checked  = false;
   document.getElementById('prop-success').style.display='none';
   document.getElementById('prop-submit-btn').style.display='flex';
+  // Restore banner to default state after viewing history
+  const rstTitle=document.getElementById('prop-success-title');
+  const rstSub=document.getElementById('prop-success-sub');
+  if(rstTitle){rstTitle.textContent='Proposal Submitted';rstTitle.style.color='#16a34a';}
+  if(rstSub){rstSub.textContent='Saved to database · Team Leader notified';rstSub.style.color='#166534';}
   propUpdateShareTotal();
   myPropBenefCount=0;
   propAddBenef();
@@ -4969,11 +4988,11 @@ function renderPropHistory(){
     const statusColor = p.status==='Approved'?'#16a34a':p.status==='Declined'?'#dc2626':'#d97706';
     const adminBtns = isAdmin?`
       <div style="display:flex;gap:6px;margin-top:8px;flex-wrap:wrap">
-        <button onclick="propUpdateStatus('${p.ref}','Approved')" style="font-size:10px;padding:3px 10px;background:#dcfce7;color:#16a34a;border:1px solid #86efac;border-radius:12px;cursor:pointer">✓ Approve</button>
-        <button onclick="propUpdateStatus('${p.ref}','Declined')" style="font-size:10px;padding:3px 10px;background:#fee2e2;color:#dc2626;border:1px solid #fca5a5;border-radius:12px;cursor:pointer">✕ Decline</button>
-        <button onclick="propUpdateStatus('${p.ref}','Pending')" style="font-size:10px;padding:3px 10px;background:#fef3c7;color:#d97706;border:1px solid #fde68a;border-radius:12px;cursor:pointer">⏳ Pending</button>
+        <button onclick="event.stopPropagation();propUpdateStatus('${p.ref}','Approved')" style="font-size:10px;padding:3px 10px;background:#dcfce7;color:#16a34a;border:1px solid #86efac;border-radius:12px;cursor:pointer">✓ Approve</button>
+        <button onclick="event.stopPropagation();propUpdateStatus('${p.ref}','Declined')" style="font-size:10px;padding:3px 10px;background:#fee2e2;color:#dc2626;border:1px solid #fca5a5;border-radius:12px;cursor:pointer">✕ Decline</button>
+        <button onclick="event.stopPropagation();propUpdateStatus('${p.ref}','Pending')" style="font-size:10px;padding:3px 10px;background:#fef3c7;color:#d97706;border:1px solid #fde68a;border-radius:12px;cursor:pointer">⏳ Pending</button>
       </div>`:'';
-    return `<div class="hist-item">
+    return `<div class="hist-item" onclick="openPropFromHistory('${p.ref}')" style="cursor:pointer">
       <div style="flex:1;min-width:0">
         <div class="hist-name">${p.clientName||'—'}</div>
         <div class="hist-meta">${p.ref} · USD ${parseFloat(p.monthlyPremium||0).toFixed(2)}/mo</div>
@@ -4987,6 +5006,37 @@ function renderPropHistory(){
       </div>
     </div>`;
   }).join('');
+}
+
+/* ── Open saved proposal from history ── */
+function openPropFromHistory(ref){
+  const proposals = JSON.parse(localStorage.getItem(PROPOSALS_KEY)||'[]');
+  const p = proposals.find(x=>x.ref===ref);
+  if(!p){ showToast('Proposal not found'); return; }
+  myPropData = p;
+  switchTab('proposal');
+  setTimeout(()=>{
+    // Hide submit button & sync pill; show the success/view panel
+    document.getElementById('prop-submit-btn').style.display='none';
+    const ss = document.getElementById('prop-sync-status');
+    if(ss) ss.style.display='none';
+    document.getElementById('prop-success').style.display='block';
+    // Update banner text via IDs — never corrupts future submissions
+    const statusColor = p.status==='Approved'?'#16a34a':p.status==='Declined'?'#dc2626':'#d97706';
+    const titleEl = document.getElementById('prop-success-title');
+    const subEl   = document.getElementById('prop-success-sub');
+    if(titleEl){ titleEl.textContent='Viewing Saved Proposal'; titleEl.style.color=statusColor; }
+    if(subEl) subEl.innerHTML='Status: <strong style="color:'+statusColor+'">'+(p.status||'Pending')+'</strong> &nbsp;&middot;&nbsp; '+fmtDate((p.submittedAt||p.savedAt||'').split('T')[0]);
+    const refEl = document.getElementById('prop-ref-display');
+    if(refEl) refEl.textContent='Ref: '+p.ref;
+    // Rebuild the proposal summary document
+    myPropBuildDoc(p);
+    // Scroll to the success/document block (not the top of the tab)
+    const succEl = document.getElementById('prop-success');
+    const ab = document.getElementById('app-body');
+    if(succEl && ab) ab.scrollTop = succEl.offsetTop - 10;
+    showToast('Proposal '+p.ref+' loaded', 2500);
+  }, 200);
 }
 
 function propUpdateStatus(ref, status){
